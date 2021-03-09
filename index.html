@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Treinamento Profissional Digital</title>
+  <link rel="shortcut icon" href="files/favicon.ico">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin&family=Montserrat&family=Open+Sans&family=Oswald&display=swap" rel="stylesheet">
+  <style>
+    header {
+      background: url("files/headerbg2.png");
+      background-repeat: no-repeat;
+    }
+    h1 {
+      font-size: clamp(1.5em, 1em + 3vw, 2.5em);
+      text-transform: uppercase bold;
+      font-family: 'Montserrat', sans-serif;
+    }
+    .a-btn {
+      text-decoration: none;
+      -webkit-font-smoothing: antialiased;
+      margin: 0;
+      border: 0; 
+      font: inherit; 
+      vertical-align: baseline;
+      color: #2e82bc; 
+      outline: 0; 
+      line-height: 1; 
+      text-align: center; 
+      position:relative!important; display: inline-block!important;
+      border-style: solid; 
+      width: 100%; padding-left: 0!important; padding-right: 0!important; 
+      margin-bottom: 10px; 
+      padding: 22px 44px; border-color: #ff5535; border-width: 0px; 
+      border-radius: 6px; 
+      background: linear-gradient(to bottom, #ff6600 0%, #ff5535 100%); 
+      box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.5); 
+      text-decoration: none!important;
+    }
+    .span-btn {
+      text-decoration: none;
+      -webkit-font-smoothing: antialiased; 
+      text-align: center;
+      margin: 0; 
+      border: 0; 
+      font: inherit;
+      vertical-align: baseline;
+      display: block; 
+      position: relative; 
+      z-index: 1; 
+      padding: 0 15px; 
+      white-space: normal; 
+      font-size: 25px;
+      color: #ffffff; 
+      font-family: Oswald; 
+      font-weight: bold; 
+      text-shadow: #000000 0px 1px 0px;
+      text-decoration: none;
+    }
+    .span-btn2 {
+      -webkit-font-smoothing: antialiased; 
+      text-align: center;
+      padding: 0; border: 0;
+      font: inherit; 
+      vertical-align: baseline; 
+      display: block; 
+      position: relative;
+      z-index: 1; 
+      margin: .2em 0 -.5em; 
+      font-size: 15px; 
+      color: #f5e051; 
+      font-family: Cabin; 
+      font-weight: bold; 
+      font-style: italic;
+      text-shadow: #000000 0px 1px 0px;
+    }
+    .comments {
+      background-color: #F6F7F9;
+    }
+    .comment {
+      display: block; 
+      padding: 10px 0; 
+      line-height: 20px;
+    }
+    .span {
+      color: #365899; 
+      font-weight: bold;
+    }
+    .answer {
+      color: #444; 
+      -webkit-font-smoothing: antialiased;
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      font: inherit; 
+      vertical-align: baseline; 
+      display: block; 
+      padding-top: 10px; 
+      line-height: 20px;
+      padding-left: 9px; 
+      border-left: 1px solid #E9EBEE; margin-left: 50px; padding-bottom: 0;
+    }
+    .classeNova {
+      color: #444; 
+      -webkit-font-smoothing: antialiased; 
+      margin: 0; 
+      padding: 0; 
+      border: 0; 
+      font: inherit; 
+      vertical-align: baseline;
+      font-family: Arial; 
+      background-color:
+      #F6F7F9;
+      font-size: 14px; 
+      padding-top: 20px;"      
+    }
+    .paragrafo {
+      color: #444; 
+      font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+      line-height: 1.5em; 
+      margin: 0;
+      margin-left: 60px; 
+      margin-bottom: 0px;
+    }
+    .like {
+      font-size: 11px; color: #90949c;
+    }
+    .twenty1 {
+      font-weight: 700; 
+      border-bottom: 1px solid #E9EBEE; 
+      display: block; 
+      padding-bottom: 6px;
+    }
+    .imgComment {
+      width: 60px; 
+      height: 50px; 
+      float: left; 
+      padding-right: 10px;
+    }
+    .hide {
+      display: none;
+    }
+    .pirataria h3 {
+      text-transform: uppercase;
+      font-size: 15px;
+      letter-spacing: 5px;
+    }
+    .pirataria b{
+      color: #FFC400;
+    }
+    .pirataria {
+      font-size: 12px;
+      text-align: justify;
+    }
+    footer {
+      background-color: black;
+      padding-top: 25px;
+      padding-bottom: 25px;
+      color: white;
+    }
+    .cpy {
+      font-size: 12px;
+      margin: 37px 0px 20px 0px;
+    }
+    .links a {
+      font-size: 12px;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <header class="py-3">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <img src="files/ultrasecreto4.png" class="img-fluid my-3">
+          <h1>O SEGREDO PARA TRABALHAR EM MULTINACIONAIS COMO <span style="color: #4285f4;">G</span><span style="color: #db4437;">O</span><span style="color: #f4b400;">O</span><span style="color: #4285f4;">G</span><span style="color: #0f9d58;">L</span><span style="color: #db4437;">E</span>, <span style="color: #4267B2;">FACEBOOK</span>, <span style="color: #ff9900;">AMAZON</span> E <span style="color: #e50914;">NETFLIX</span></font></h1>
+          <div class="embed-responsive embed-responsive-16by9 mb-4">
+            <iframe src="https://player.vimeo.com/video/520317074?autoplay=1&loop=1&autopause=0" allowfullscreen></iframe>
+          </div>
+          <div id="btn" class="mt-3 hide">
+            <a href="https://pay.hotmart.com/G40422255D?off=0wuj4igr&checkoutMode=10" class="a-btn" style="text-decoration: none;">
+              <span class="span-btn">QUERO FAZER O PROGRAMA!</span>
+              <span class="span-btn2">(atenção: vagas limitadas)</span>
+            </a>
+            <div class="cards mt-3">
+              <img class="img-fluid" src="files/cards/AMEX.svg"></img>
+              <img class="img-fluid" src="files/cards/BILLET.svg"></img>
+              <img class="img-fluid" src="files/cards/DINERS.svg"></img>
+              <img class="img-fluid" src="files/cards/ELO.svg"></img>
+              <img class="img-fluid" src="files/cards/HIPERCARD.svg"></img>
+              <img class="img-fluid" src="files/cards/MASTER_CARD.svg"></img>
+              <img class="img-fluid" src="files/cards/PAYPAL.svg"></img>
+              <img class="img-fluid" src="files/cards/VISA.svg"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="comments">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="classeNova">
+            <span class="twenty1">
+              21 comentários
+            </span>
+			<p style="text-align: center;"><span style="color: #999999;">Entre no Facebook para comentar</span></p>
+			<div class="comment">
+              <span class="span">
+                <img src="files/profiles/3.jpg" class="imgComment">Rafaela
+                disse</span>
+              <p class="paragrafo">
+                Não sei se entro ou não no programa kkkk estou mto indecisa!!</p>
+              <span class="like">Responder
+                · Curtir · Seguir · 1 hora atrás</span>
+                <div class="answer comment">
+                <span class="span">
+                  <img src="files/profiles/16.jpg" class="imgComment">Gabriela
+                  disse</span>
+                <p class="paragrafo">
+                  Mds eu também, alguém pode me ajudar?</p>
+                <span class="like">Responder
+                  · Curtir · Seguir · 12 min</span>
+              </div>
+              <div class="answer comment">
+                <span class="span">
+                  <img src="files/profiles/1.jpg" class="imgComment">Rafael Oliveira
+                  disse</span>
+                <p class="paragrafo">
+                  Qual a sua dúvida especificamente? o Home Office já é uma realidade, em grandes empresas, atualmente estou trabalhando como avaliador de mídia no facebook, o número de anunciantes em redes como facebook e google praticamente dobrou no ultimo ano, e com isso, mas anuncios são publicados diariamente, e uma maior demanda por avaliadores de midia.</p>
+                <span class="like">Responder
+                  · Curtir · Seguir · 3 min</span>
+              </div>
+              <div class="answer comment">
+                <span class="span">
+                  <img src="files/profiles/16.jpg" class="imgComment">Gabriela
+                  disse</span>
+                <p class="paragrafo">
+                  Parabéns pelo resultado Rafael.... pensei bem e tenho absoluta certeza que vai valer a pena!!! Obrigada</p>
+                <span class="like">Responder
+                  · Curtir · Seguir · 3 min</span>
+              </div>
+              <div class="answer comment">
+                <span class="span">
+                  <img src="files/profiles/3.jpg" class="imgComment">Rafaela
+                  disse</span>
+                <p class="paragrafo">
+                  Rafael, pode me passar mais informações? Estou quase comprando haha</p>
+                <span class="like">Responder
+                  · Curtir · Seguir · 3 min</span>
+              </div>
+              <div class="answer comment">
+                <span class="span">
+                  <img src="files/profiles/1.jpg" class="imgComment">Rafael Oliveira
+                  disse</span>
+                <p class="paragrafo">
+                  Claroo Rafa, te chamei no privado..</p>
+                <span class="like">Responder
+                  · Curtir · Seguir · 3 min</span>
+              </div>
+            </div>
+			<div class="comment">
+              <span class="span">
+                <img src="files/profiles/kaua.jpg" class="imgComment">
+                Kauã
+                disse</span>
+              <p class="paragrafo">
+                tinha tentado várias vezes na appen e nunca conseguia, depois de usar o modelo de currículo de voces e aplicar o métdo que vocês ensinaram, finalmente consegui, gratidão. 🙏🏻🙏🏻 </p>
+              <span class="like">Responder
+                · Curtir · Seguir · 6 semanas atrás</span>
+            </div>
+			<div class="comment">
+              <span class="span">
+                <img src="files/profiles/stefany.jpg" class="imgComment">Alessandra
+                disse</span>
+              <p class="paragrafo">
+                Comprei o curso e no meu primeiro mes já consegui trabalhar como atendente virtual, obrigada Flávia pela oportunidade!!
+              </p>
+              <span class="like">Responder
+                · Curtir · Seguir · 22 min</span>
+              <div class="answer comment">
+                <span class="span">
+                  <img src="files/profiles/vitoria.jpg" class="imgComment">
+                  Vitória
+                  disse</span>
+                <p class="paragrafo">
+                  Funciona msmo?</p>
+                <span class="like">Responder
+                  · Curtir · Seguir · 6 min</span>
+              </div>
+              <div class="answer comment">
+                <span class="span">
+                  <img src="files/profiles/stefany.jpg" class="imgComment">Alessandra
+                  disse</span>
+                <p class="paragrafo">
+                  muito bom, meu namorado comprou a 3 meses atras e hoje esta trabalhando como avaliador de mídia para o google...</p>
+                <span class="like">Responder
+                  · Curtir · Seguir · 42 min</span>
+              </div>
+            </div>
+            <div class="comment">
+              <span class="span">
+                <img src="files/profiles/vitor.jpg" class="imgComment">
+                Vitor
+                disse</span>
+              <p class="paragrafo">
+                Comprei e recebi o acesso ontem, ansioso pra começar</p>
+              <span class="like">Responder
+                · Curtir · Seguir · 14 min</span>
+            </div>
+            <div class="comment">
+              <span class="span">
+                <img src="files/profiles/raquel.jpg" class="imgComment">Raquel
+                disse</span>
+              <p class="paragrafo">
+                isso é verdade mesmo?</p>
+              <span class="like">Responder
+                · Curtir · Seguir · 3 min</span>
+            </div>
+            <div class="comment">
+              <span class="span">
+                <img src="files/profiles/juliano.jpg" class="imgComment">Juliano
+                disse</span>
+              <p class="paragrafo">
+                Tô surpreso com esse treinamento, consegui meu primeiro trabalho como freelancer</p>
+              <span class="like">Responder
+                · Curtir · Seguir · 6 semanas atrás</span>
+            </div>
+            <div class="comment">
+              <span class="span">
+                <img src="files/profiles/luis.jpg" class="imgComment">Luis
+                disse</span>
+              <p class="paragrafo">
+                Adquiri o treinemento e vou te dizer que, receber em dólar é outro mundo haha</p>
+              <span class="like">Responder
+                · Curtir · Seguir · 3 dias atrás</span>
+            </div>
+            <div class="comment">
+              <span class="span">
+                <img src="files/profiles/everton.jpg" class="imgComment">Everton
+                disse</span>
+              <p class="paragrafo">
+                Nossa Flávia, tu devia cobrar mais caro pelo treinamento, sem palavras</p>
+              <span class="like">Responder
+                · Curtir · Seguir · 1 semanas atrás</span>
+            </div>
+            <div class="comment">
+              <span class="span">
+                <img src="files/profiles/carlos.jpg" class="imgComment">Carlos
+                disse</span>
+              <p class="paragrafo">
+                Gente, será que funciona mesmo?
+              </p>
+              <span class="like">Responder
+                · Curtir · Seguir ·3 semanas atrás</span>
+              <div class="answer comment">
+                <span class="span">
+                  <img src="files/profiles/fernando.jpg" class="imgComment">
+                  Fernando
+                  disse</span>
+                <p class="paragrafo">
+                  sim meu querido, to trabalhando como atendente virtual a 3 meses, home office tá muito em alta devido a pandemia</p>
+                <span class="like">Responder
+                  · Curtir · Seguir · 3 semanas atrás</span>
+              </div>
+              <div class="answer comment">
+                <span class="span">
+                  <img src="files/profiles/carlos.jpg" class="imgComment">Carlos
+                  disse</span>
+                <p class="paragrafo">
+                  Obrigado. Vou tentar parabéns</p>
+                <span class="like">Responder
+                  · Curtir · Seguir · 22 min</span>
+              </div>
+            </div>
+            <div class="comment">
+              <span class="span">
+                <img src="files/profiles/claudia-silva.jpg" class="imgComment">Claudia
+                Silva disse</span>
+              <p class="paragrafo">
+                Minha vida mudou do dia pra noite!!! Obrigada pelo guia Flávia… Deus te abençoe.</p>
+              <span class="like">Responder
+                · Curtir · Seguir · 3 min</span>
+                <div class="answer comment">
+                <span class="span">
+                  <img src="files/profiles/8.jpg" class="imgComment">Heloísa
+                  disse</span>
+                <p class="paragrafo">
+                  Funciona mesmo amiga??</p>
+                <span class="like">Responder
+                  · Curtir · Seguir · 3 min</span>
+              </div>
+                <div class="answer comment">
+                <span class="span">
+                  <img src="files/profiles/claudia-silva.jpg" class="imgComment">
+                  Claudia
+                Silva
+                  disse</span>
+                <p class="paragrafo">
+                  Com certeza linda, mudou totalmente minha vida..</p>
+                <span class="like">Responder
+                  · Curtir · Seguir · 3 min</span>
+              </div>
+            </div>
+            <div class="comment">
+              <span class="span">
+                <img src="files/profiles/marcio.jpg" class="imgComment">Marcio
+                Nogueira disse</span>
+              <p class="paragrafo">
+                Olha só o que vi quando acessei o paypal hoje </p> <img src="files/wpp/paypal01.jpeg" width="50%" height="50%"></p>
+              <span class="like">Responder
+                · Curtir · Seguir · 8 horas atrás</span>
+              <div class="answer comment">
+                <span class="span">
+                  <img src="files/profiles/marcela.jpg" class="imgComment">Marcela
+                  disse</span>
+                <p class="paragrafo">
+                  parabens Marcio, em quanto tempo voce levou para ter esse resultado? e com o que está trabalhando?</p>
+                <span class="like">Responder
+                  · Curtir · Seguir · 2 horas atrás</span>
+              </div>
+              <div class="answer comment">
+                <span class="span">
+                  <img src="files/profiles/jeferson.jpg" class="imgComment">Jeferson
+                  disse</span>
+                <p class="paragrafo">
+                  Meu trabalho parou com a pandemia, peguei um dinheirinho reserva que tinha e investi no curso, melhor investimento da vida!!</p>
+                <span class="like">Responder
+                  · Curtir · Seguir · 44 min</span>
+              </div>
+              <div class="answer comment">
+                <span class="span">
+                  <img src="files/profiles/marcio.jpg" class="imgComment">Marcio
+                  Nogueira disse</span>
+                <p class="paragrafo">
+                  Marcela, em 3 meses consegui como atendente virtual</p>
+                <span class="like">Responder
+                  · Curtir · Seguir · 33 min</span>
+              </div>
+            </div>
+            <div class="comment">
+              <span class="span">
+                <img src="files/profiles/adalberto.jpg" class="imgComment">Adalberto
+                disse</span>
+              <p class="paragrafo">
+                Alguém aí já comprou? Pode me dizer se deu resultado?</p>
+              <span class="like">Responder
+                · Curtir · Seguir · 3 min</span>
+                <div class="answer comment">
+                <span class="span">
+                  <img src="files/profiles/7.jpg" class="imgComment">
+                  Fernanda
+                  disse</span>
+                <p class="paragrafo">
+                  Eu já terminei o curso sim Adalberto, posso dizer que com certeza foi a melhor coisa que fiz...</p>
+                <span class="like">Responder
+                  · Curtir · Seguir · 3 min</span>
+              </div>
+              <div class="answer comment">
+                <span class="span">
+                  <img src="files/profiles/adalberto.jpg" class="imgComment">Adalberto
+                  disse</span>
+                <p class="paragrafo">
+                  Interessante, vou terminar de assistir o vídeo e comprar!!</p>
+                <span class="like">Responder
+                  · Curtir · Seguir · 3 min</span>
+              </div>
+            </div>
+            <div class="comment">
+              <span class="span">
+                <img src="files/profiles/jessica.jpg" class="imgComment">Jessica
+                disse</span>
+              <p class="paragrafo">
+                Gente eu tenho medo de gastar dinheiro e não dar certo 🙁</p>
+              <span class="like">Responder
+                · Curtir · Seguir · 4 semanas atrás</span>
+              <div class="answer comment">
+                <span class="span">
+                  <img src="files/profiles/joao.jpg" class="imgComment">João
+                  disse</span>
+                <p class="paragrafo">
+                  Nunca tinha ganho mais que um salário minimo sem ter faculdade, simplesmente sensacional o curso Flávia </p>
+                <span class="like">Responder
+                  · Curtir · Seguir · 3 min</span>
+              </div>
+              <div class="answer comment">
+                <span class="span">
+                  <img src="files/profiles/bruna.jpg" class="imgComment">Bruna
+                  disse</span>
+                <p class="paragrafo">
+                  To em choque, acabei de receber meu primeiro pagamento no paypal</p>
+                <span class="like">Responder
+                  · Curtir · Seguir · 42 min</span>
+              </div>
+            </div>
+            <div class="comment">
+              <span class="span">
+                <img src="files/profiles/claudia.jpg" class="imgComment">Claudia
+                disse</span>
+              <p class="paragrafo">
+               Sou uma das alunas da nova turma do TPD e quero te dizer que to adorandooo</p>
+              <span class="like">Responder
+                · Curtir · Seguir · 3 min</span>
+            </div>
+            <div class="comment">
+              <span class="span">
+                <img src="files/profiles/rafael.jpg" class="imgComment">Rafael
+                disse</span>
+              <p class="paragrafo">
+                Flávia vc ta vendendo muito barato! @leo_andrade esse aqui que te falei que funcionou pra mim. Pode comprar!</p>
+              <span class="like">Responder
+                · Curtir · Seguir · 12 semanas atrás</span>
+            </div>
+            <div class="comment">
+              <span class="span">
+                <img src="files/profiles/aline.jpg" class="imgComment">Aline
+                disse</span>
+              <p class="paragrafo">
+                Acabei de comprar por indicação da minha amiga que trabalha como avaliadora de mídia a 6 meses, depois volto pra dizer o que achei bjoo</p>
+              <span class="like">Responder
+                · Curtir · Seguir ·2 semanas atrás</span>
+            </div>
+          </div>
+  
+</div>
+
+          <div class="mt-3 mb-4 text-center hide" id="btn2">
+            <a href="https://pay.hotmart.com/G40422255D?off=0wuj4igr&checkoutMode=10" class="a-btn" style="text-decoration: none;">
+              <span class="span-btn">QUERO FAZER O PROGRAMA!</span>
+              <span class="span-btn2">(atenção: vagas limitadas)</span>
+            </a>
+            <div class="cards mt-3">
+              <img class="img-fluid" src="files/cards/AMEX.svg"></img>
+              <img class="img-fluid" src="files/cards/BILLET.svg"></img>
+              <img class="img-fluid" src="files/cards/DINERS.svg"></img>
+              <img class="img-fluid" src="files/cards/ELO.svg"></img>
+              <img class="img-fluid" src="files/cards/HIPERCARD.svg"></img>
+              <img class="img-fluid" src="files/cards/MASTER_CARD.svg"></img>
+              <img class="img-fluid" src="files/cards/PAYPAL.svg"></img>
+              <img class="img-fluid" src="files/cards/VISA.svg"></img>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-md-6 pirataria">
+          <h3> Pirataria é <b>CRIME</b></h3>
+          A venda do Treinamento Profissional Digital só pode ser realizada através deste site. Qualquer outro site onde você encontre este programa é uma
+          FALSIFICAÇÃO e vai contra as leis. Evite falsificações e recuse conteúdos ilegais ou pirateados.
+          NÃO adquira programas parecidos e que não são baseados em anos de estudo da psicologia
+          comportamental. Não nos responsabilizamos por compras realizadas em outros sites.
+        </div>
+        <div class="col-xs-12 col-md-6">
+          <div class="row cpy">
+            <div class="col text-center">
+              Copyright 2021 - Treinamento Profissional Digital ®<br>
+              Todos os direitos reservados.
+            </div>
+          </div>
+          <div class="row links">
+            <div class="col text-center">
+              <a href="termos-de-uso.html" target="_blank">Termos de Uso</a>          
+              <a href="politica-de-privacidade.html" target="_blank">Políticas de Privacidade</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-md-12 text-center" style="font-size: 11px; padding: 40px 0px 20px 0px; color: #b7adad;">
+          <b>Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook.</b> Depois que você sair do
+          Facebook, a responsabilidade não é deles e sim do nosso site. Fazemos todos os esforços para indicar
+          claramente e mostrar todas as provas do produto e usamos resultados reais. Nós não vendemos o seu
+          e-mail ou qualquer informação para terceiros. Jamais fazemos nenhum tipo de spam. Se você tiver
+          alguma dúvida, sinta-se à vontade para usar o link de contato e falar conosco em horário comercial
+          de Segunda a Sextas das 09h00 ás 18h00. Lemos e respondemos todas as mensagens por ordem de chegada.
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    function showBtn () {
+      document.getElementById("btn").classList.remove("hide")
+    }
+    setTimeout(showBtn, 1410000)
+    function showBtn2 () {
+      document.getElementById("btn2").classList.remove("hide")
+    }
+    setTimeout(showBtn2, 600000)
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</body>
+</html>
