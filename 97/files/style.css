@@ -6,9 +6,10 @@ body {
     background-color: #2B0909;
     color: #FFF;
     background-image: url(../img/bg.png);
-    background-position: top center;
-    background-size: 100% auto;
-    background-repeat: repeat-y;
+    background-blend-mode: darken;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed;
 }
 
 /* Navbar */
